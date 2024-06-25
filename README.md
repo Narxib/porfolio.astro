@@ -1,2 +1,2 @@
-# porfolio.astro
+# Porfolio.astro
 Porfolio hecho en Astro
