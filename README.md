@@ -7,4 +7,4 @@ Porfolio made in Astro
 
 </br>
 ⛓Link
-https://classy-sunflower-2ce394.netlify.app
+https://phenomenal-jalebi-483e97.netlify.app/
