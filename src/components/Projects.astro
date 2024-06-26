@@ -1,0 +1,54 @@
+---
+import Github from "../../public/icons/Github.astro";
+
+const PROJECTS = [
+    {
+        title: "APP DE NOTAS",
+        description:
+            "Una app de notas donde puedes hacer loggin y guardar tus notas en una base de datos",
+        tags: ["Javascript", "HTML", "CSS", "MongoDB", "PUG"],
+        link: "#",
+        github: "https://github.com/Narxib/Notes-App",
+        img: "/img/banner.webp",
+    },
+    {
+        title: "Kanjisho",
+        description:
+            "Una app para buscar el significado de kanjis y vocabulario en japones utilizando una API. Fue mayoritariamente un projecto para aprender sobre Express.",
+        tags: ["Javascript", "HTML", "EJS", "CSS"],
+        link: "#",
+        github: "https://github.com/Narxib/Kanjisho.git",
+        img: "/img/kanjisho.webp",
+    },
+];
+---
+
+<article class="mt-6" id="projects">
+    {
+        PROJECTS.map(({ title, description, tags, img, link, github }) => (
+            <article class="flex text-left flex-col py-4 pt-22 my-4 p-6 rounded-lg transition-all duration-150 hover:bg-white/10">
+                <h3 class="text-bold text-2xl ">{title}</h3>
+                <p class="text-gray-200/50 font-light py-4">{description}</p>
+                <ul class="flex">
+                    {tags.map((tag) => (
+                        <li class="border rounded-full h-10 w-auto p-2 m-2">
+                            {tag}
+                        </li>
+                    ))}
+
+                    <a
+                        class="border h-10 w-auto p-2 m-2 rounded-xl items-center"
+                        href={github}
+                    >
+                        <Github />
+                    </a>
+                </ul>
+                <img
+                    class="h-[400px] my-4 rounded-xl justify-center bg-violet-400/40 p-4"
+                    src={img}
+                    alt={title}
+                />
+            </article>
+        ))
+    }
+</article>

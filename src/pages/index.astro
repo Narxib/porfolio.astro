@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Github from "../../public/icons/Github.astro";
+import Twitter from "../../public/icons/Twitter.astro";
+import Linkedin from "../../public/icons/Linkedin.astro";
+import Pill from "../components/Pill.astro";
+import Mail from "../../public/icons/Mail.astro";
+import Projects from "../components/Projects.astro";
+import Code from "../../public/icons/Code.astro";
+---
+
+<Layout title="Mi Portfolio">
+    <main class="px-6">
+        <section id="aboutme" class="w-full lg:w-[740px] mx-auto pt-44">
+            <a
+                class="hover:scale-110 transition-all duration-150 hover:shadow-sm"
+                href="https://github.com/Narxib/WebTest"
+            >
+                <img
+                    class="w-24 h-24 xl:w-16 xl:h-16 rounded-full mb-6"
+                    src="https://avatars.githubusercontent.com/u/108269492?v=4"
+                    alt="logo"
+                /></a
+            >
+            <h1
+                class="text-white text-2xl lg:text-5xl gap-x-4 flex flex-row justify-left pb-4 font-bold"
+            >
+                Hey, soy Brian <div
+                    class="flex justify-center items-center gap-x-4"
+                >
+                    <a
+                        class="flex align-center"
+                        href="https://github.com/Narxib"
+                    >
+                        <Badge>Disponible</Badge></a
+                    >
+                </div>
+            </h1>
+            <h2 class="text-2xl text-pretty opacity-80">
+                <span class="text-violet-400">
+                    Programador web autodidacta
+                </span>.Conocimiento en varios frameworks de <span
+                    class="text-yellow-300">Javascript</span
+                > como <span class="text-violet-400">NextJS, Astro y Node</span
+                >. Localizado en Alicante
+            </h2>
+            <nav class="flex flex-wrap gap-y-3 gap-x mt-10">
+                <Pill href="https://github.com/Narxib"><Github />GitHub</Pill>
+                <Pill href="https://twitter.com/home"><Twitter />Twitter</Pill>
+                <Pill
+                    href="https://www.linkedin.com/in/brian-zaragoza-cerd%C3%A1-39301b2a0/"
+                    ><Linkedin />LinkedIn</Pill
+                >
+                <Pill href="mailto:brianzaragoza25@gmail.com"
+                    ><Mail class="size-6" />brianzaragoza25@gmail.com</Pill
+                >
+            </nav>
+        </section>
+        <section class="w-full lg:w-[740px] mx-auto mt-24">
+            <div class="flex">
+                <Code class="size-7" /><h2 class="text-2xl px-4">Projectos</h2>
+            </div>
+            <Projects id="projects" />
+        </section>
+    </main>
+</Layout>
